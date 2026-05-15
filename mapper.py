@@ -434,8 +434,8 @@ def display_map(filename="map.npy"):
         map_img[free] = [255, 255, 255]      # White for free
         map_img[occupied] = [0, 0, 0]        # Black for occupied
         
-        # Scale up for better visibility (4x larger)
-        map_img_scaled = cv2.resize(map_img, (width*4, height*4), interpolation=cv2.INTER_NEAREST)
+        # Scale up for better visibility (2x larger)
+        map_img_scaled = cv2.resize(map_img, (width*2, height*2), interpolation=cv2.INTER_NEAREST)
         
         # Display in window
         cv2.imshow('Occupancy Grid Map', map_img_scaled)
